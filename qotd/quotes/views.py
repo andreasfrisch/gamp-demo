@@ -3,9 +3,16 @@ from django.template import loader
 
 from .models import Quote
 
-def index(request):
-    latest_quote = Quote.objects.order_by('-published_date').first()
+def newest(request):
+    newest_quote = Quote.objects.order_by('-published_date').first()
     context = {
-        'latest_quote': latest_quote,
+        'quote': newest_quote,
+    }
+    return render(request, 'quotes/newest.html', context)
+
+def index(request):
+    quotes = Quote.objects.order_by('-published_date')
+    context = {
+        'quotes': quotes
     }
     return render(request, 'quotes/index.html', context)

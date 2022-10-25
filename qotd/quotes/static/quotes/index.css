@@ -1,0 +1,18 @@
+.quote-list {
+	margin: auto;
+}
+
+span.date {
+	float: left;
+	padding-right: 10px;
+}
+
+span.category {
+	float: left;
+	padding-right: 40px;
+	color: blue;
+}
+
+span.quote {
+	float: left;
+}

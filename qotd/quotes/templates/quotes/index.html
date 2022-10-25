@@ -1,15 +1,13 @@
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'quotes/detail.css' %}">
+<link rel="stylesheet" href="{% static 'quotes/index.css' %}">
 
-{% if latest_quote %}
-	<div class='quote'>
-		<span class='date'>{{latest_quote.published_date}}</span>
-		</br>
-		<span class='category'>{{latest_quote.category}}</span>
-		</br>
-		<p class='quote'>{{latest_quote.content}}</p>
-	</div>
-{% else %}
-	<p class='error'>No quote available</p>
-{% endif %}
+<h1>Quotes through the ages:</h1>
+<div class='quote-list'>
+{% for q in quotes %}
+	<span class='date'>{{q.published_date}}</span>
+	<span class='category'>{{q.category}}</span>
+	<span class='quote'>{{q.content}}</span>
+	<br/>
+{% endfor %}
+</div>
