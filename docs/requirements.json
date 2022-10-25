@@ -4,5 +4,11 @@
 	},
 	"REQ-02": {
 		"Description": "As anyone, I can visit a webpage to be presented with the newest quote."
+	},
+	"REQ-03": {
+		"Description": "As anyone, I can query the server programmatically to get a list of all quotes."
+	},
+	"REQ-04": {
+		"Description": "As anyone, I can visit a webpage to be presented with a list of all quotes."
 	}
 }
