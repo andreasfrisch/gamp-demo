@@ -1,0 +1,8 @@
+{
+	"REQ-01": {
+		"Description": "As an administrator, I can add more quotes to the database of quotes."
+	},
+	"REQ-02": {
+		"Description": "As anyone, I can visit a webpage to be presented with the newest quote."
+	}
+}

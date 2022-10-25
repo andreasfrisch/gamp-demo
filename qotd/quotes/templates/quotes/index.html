@@ -1,0 +1,15 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'quotes/detail.css' %}">
+
+{% if latest_quote %}
+	<div class='quote'>
+		<span class='date'>{{latest_quote.published_date}}</span>
+		</br>
+		<span class='category'>{{latest_quote.category}}</span>
+		</br>
+		<p class='quote'>{{latest_quote.content}}</p>
+	</div>
+{% else %}
+	<p class='error'>No quote available</p>
+{% endif %}
